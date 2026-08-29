@@ -7,8 +7,8 @@ const CARD_WIDTH = 1080;
 const CARD_HEIGHT = 1620;
 const CARD_BORDER = 68;
 const COOLDOWN_MS = 60_000;
-const EVENT_DATE = "21MAY26";
-const DEFAULT_EVENT_UNLOCK_AT = "2026-05-21T00:00:00-05:00";
+const EVENT_DATE = "29AGO26";
+const DEFAULT_EVENT_UNLOCK_AT = "2026-08-29T00:00:00-05:00";
 const EVENT_UNLOCK_AT = process.env.NEXT_PUBLIC_EVENT_UNLOCK_AT ?? DEFAULT_EVENT_UNLOCK_AT;
 const DEV_UNLOCK_COOKIE = "platzi_dev_unlock";
 const PLATZI_GREEN = "#98CA3F";
@@ -297,7 +297,7 @@ function drawCardChrome(context: CanvasRenderingContext2D, photoArea: PhotoArea)
   context.strokeRect(CARD_WIDTH / 2 - dateWidth / 2 + 6, overlayY + 64, dateWidth - 12, dateHeight - 12);
 
   drawPixelText(context, EVENT_DATE, CARD_WIDTH / 2, overlayY + 93, dateWidth - 36, 7, INK);
-  drawPixelText(context, "PLATZI LIVE", CARD_WIDTH / 2, overlayY + 185, photoArea.width - 92, 10, PLATZI_GREEN);
+  drawPixelText(context, "PLATZI CONF", CARD_WIDTH / 2, overlayY + 185, photoArea.width - 92, 10, PLATZI_GREEN);
 
   context.fillStyle = PLATZI_GREEN;
   context.fillRect(photoArea.x + 34, photoArea.y + photoArea.height - 38, 118, 14);
@@ -693,7 +693,7 @@ export default function PhotoCardStudio() {
 
     const link = document.createElement("a");
     link.href = capturedImage;
-    link.download = "platzi-live-16bit-card.png";
+    link.download = "platzi-conf-16bit-card.png";
     link.click();
   };
 
@@ -754,11 +754,11 @@ export default function PhotoCardStudio() {
       <main className="flex min-h-dvh flex-col bg-[#121F3D] text-white">
         <section className="mx-auto flex w-full max-w-3xl flex-1 flex-col items-center justify-center gap-8 px-5 py-10 text-center">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#98CA3F]/50 bg-[#98CA3F]/10 px-4 py-2 font-mono text-xs font-bold uppercase tracking-[0.24em] text-[#98CA3F]">
-            Platzi Live · {EVENT_DATE}
+            Platzi Conf · {EVENT_DATE}
           </div>
           <div className="space-y-4">
             <h1 className="text-5xl font-black leading-[0.92] tracking-[-0.06em] text-[#98CA3F] sm:text-7xl">
-              Disponible el 21 de mayo
+              Disponible el 29 de agosto
             </h1>
             <p className="mx-auto max-w-xl text-base leading-7 text-zinc-300 sm:text-lg">
               La cámara y generación de cards se habilitarán automáticamente para el meetup.
@@ -789,7 +789,7 @@ export default function PhotoCardStudio() {
           >
             @ErasmoHernandez
           </a>
-          , con amor para Platzi Live ·{" "}
+          , con amor para Platzi Conf ·{" "}
           <a
             href="https://erasmoh.dev"
             target="_blank"
@@ -808,14 +808,14 @@ export default function PhotoCardStudio() {
       <section className="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-8 px-5 py-6 sm:px-8 lg:grid lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-10">
         <div className="flex flex-col gap-5">
           <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#98CA3F]/50 bg-[#98CA3F]/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.24em] text-[#98CA3F]">
-            Platzi Live
+            Platzi Conf
           </div>
           <div className="space-y-4">
             <h1 className="max-w-xl text-5xl font-black leading-[0.92] tracking-[-0.06em] text-[#98CA3F] sm:text-7xl">
               Tu cara en una card 16-bit
             </h1>
             <p className="max-w-lg text-base leading-7 text-zinc-300 sm:text-lg">
-              Usa la cámara frontal, captura tu foto y genera automáticamente un retrato 16-bit pixel con IA para tu card de Platzi Live.
+              Usa la cámara frontal, captura tu foto y genera automáticamente un retrato 16-bit pixel con IA para tu card de Platzi Conf.
             </p>
           </div>
 
@@ -895,7 +895,7 @@ export default function PhotoCardStudio() {
               {capturedImage ? (
                 <Image
                   src={capturedImage}
-                  alt="Card final 16-bit de Platzi Live"
+                  alt="Card final 16-bit de Platzi Conf"
                   fill
                   unoptimized
                   className="object-cover"
@@ -906,7 +906,7 @@ export default function PhotoCardStudio() {
                     {EVENT_DATE}
                   </span>
                   <p className="text-xl font-black tracking-[0.02em] text-[#98CA3F]">
-                    PLATZI LIVE
+                    PLATZI CONF
                   </p>
                 </div>
               )}
@@ -949,7 +949,7 @@ export default function PhotoCardStudio() {
         >
           @ErasmoHernandez
         </a>
-        , con amor para Platzi Live ·{" "}
+        , con amor para Platzi Conf ·{" "}
         <a
           href="https://erasmoh.dev"
           target="_blank"

@@ -58,7 +58,7 @@ export default async function MuroPage() {
               "'Courier New', Courier, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace",
           }}
         >
-          MURO DE PLATZI LIVE
+          MURO DE PLATZI CONF
         </h1>
         <div className="shrink-0 bg-white p-2 shadow-[0_18px_55px_rgba(0,0,0,0.55)] sm:p-3">
           <Image
@@ -87,7 +87,7 @@ export default async function MuroPage() {
         >
           @ErasmoHernandez
         </a>
-        , con amor para Platzi Live ·{" "}
+        , con amor para Platzi Conf ·{" "}
         <a
           href="https://erasmoh.dev"
           target="_blank"
